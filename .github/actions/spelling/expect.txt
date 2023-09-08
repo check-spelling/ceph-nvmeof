@@ -107,6 +107,7 @@ traddr
 treq
 trsvcid
 trtype
+typooo
 ulimits
 usermod
 vcs
