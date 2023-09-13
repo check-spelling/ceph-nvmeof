@@ -751,7 +751,7 @@ class DiscoveryService:
                     log_entry.trtype = trtype
                 adrfam = ADRFAM_TYPES[allow_listeners[log_entry_counter]["adrfam"]]
                 if adrfam is None:
-                    self.logger.error("unsupported adress family")
+                    self.logger.error("unsupported address family")
                 else:
                     log_entry.adrfam = adrfam
                 log_entry.subtype = NVMF_SUBTYPE.NVME
