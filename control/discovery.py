@@ -150,7 +150,7 @@ class AutoSerializableStructure(LittleEndianStructure):
 class Pdu(AutoSerializableStructure):
     _fields_ = [
         ("type", c_uint8),
-        ("specical_flag", c_uint8),
+        ("special_flag", c_uint8),
         ("header_length", c_uint8),
         ("data_offset", c_uint8),
         ("packet_length", c_uint32),
@@ -553,7 +553,7 @@ class DiscoveryService:
         pdu_reply = Pdu()
         pdu_reply.type = NVME_TCP_PDU.C2H_DATA
         # 0x0c == 0b1100, means pdu data last: set, pdu data success: set
-        pdu_reply.specical_flag = 0x0c
+        pdu_reply.special_flag = 0x0c
         pdu_reply.header_length = 24
         pdu_reply.data_offset = 24
         pdu_reply.packet_length = 4120
@@ -785,7 +785,7 @@ class DiscoveryService:
         pdu_and_nvme_pdu_len = 8 + 16
         pdu_reply = Pdu()
         pdu_reply.type = NVME_TCP_PDU.C2H_DATA
-        pdu_reply.specical_flag = 0x0c
+        pdu_reply.special_flag = 0x0c
         pdu_reply.header_length = pdu_and_nvme_pdu_len
         pdu_reply.data_offset = pdu_and_nvme_pdu_len
         pdu_reply.packet_length = pdu_and_nvme_pdu_len + nvme_data_len
