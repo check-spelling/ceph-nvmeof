@@ -759,7 +759,7 @@ class DiscoveryService:
                 log_entry.port_id = log_entry_counter
                 log_entry.controller_id = 0xffff
                 log_entry.asqsz = 128
-                # transport service indentifier
+                # transport service identifier
                 log_entry.trsvcid = (c_ubyte * 32)(*[c_ubyte(x) for x \
                     in allow_listeners[log_entry_counter]["trsvcid"].encode()])
                 log_entry.trsvcid[len(allow_listeners[log_entry_counter]["trsvcid"]):] = \
