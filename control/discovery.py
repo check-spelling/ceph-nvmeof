@@ -944,7 +944,7 @@ class DiscoveryService:
                 else:
                     return
             except BlockingIOError:
-                self.logger.error("recived data failed.")
+                self.logger.error("received data failed.")
 
             while True:
                 if len(self_conn.recv_buffer) < 8:
