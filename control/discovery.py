@@ -238,7 +238,7 @@ class NVMeIdentify(AutoSerializableStructure):
         ("reserved1", c_uint16),
         # SGL support
         ("sgls", c_uint8 * 4),
-        # maxinum number of allowed namespaces
+        # maximum number of allowed namespaces
         ("mnan", c_uint32),
         ("reserved2", c_ubyte * 224),
         ("subnqn", c_ubyte * 256),
@@ -449,7 +449,7 @@ class DiscoveryService:
         property_get = CqePropertyGetSet()
         if NVME_CTL(nvmeof_prop_get_set_offset) == NVME_CTL.CAPABILITIES:
             # controller capabilities
-            # \x7f = maxinum queue entries support:128
+            # \x7f = maximum queue entries support:128
             # \x01 contiguous queues required: true
             # \x1e timeout(to ready status): 1e(15000ms default in server side)
             # \x20 command sets supportd: 1 (NVM IO command set)?
