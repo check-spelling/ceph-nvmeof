@@ -452,7 +452,7 @@ class DiscoveryService:
             # \x7f = maximum queue entries support:128
             # \x01 contiguous queues required: true
             # \x1e timeout(to ready status): 1e(15000ms default in server side)
-            # \x20 command sets supportd: 1 (NVM IO command set)?
+            # \x20 command sets supported: 1 (NVM IO command set)?
             property_get.property_data = (c_ubyte * 8)(0x7f, 0x00, \
                 0x01, 0x1e, 0x20, 0x00, 0x00, 0x00)
         elif NVME_CTL(nvmeof_prop_get_set_offset) == NVME_CTL.CONFIGURATION:
