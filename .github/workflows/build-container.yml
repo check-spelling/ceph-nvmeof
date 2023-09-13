@@ -346,7 +346,7 @@ jobs:
           container_ip() {
             docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$1"
           }
-          # container id is the default hostname in docker environent
+          # container id is the default hostname in docker environment
           # i.e. default gateway name
           container_id() {
             docker ps -q -f name=$1
