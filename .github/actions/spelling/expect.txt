@@ -106,6 +106,7 @@ traddr
 treq
 trsvcid
 trtype
+typooo
 ulimits
 usermod
 vcs
@@ -119,3 +120,4 @@ WORKAROUND
 WORKDIR
 workflows
 zcopy
+
